@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Header Hide Show</title>
+</head>
+
+<body class="bg-[#EAEAEA] h-[200vh]">
+
+    <!-- Tombol -->
+    <button 
+        onclick="toggleHeader()"
+        class="fixed top-5 left-5 z-50 bg-[#293241] text-white px-5 py-2 rounded-xl"
+    >
+        Tombol
+    </button>
+
+    <!-- Header -->
+    <div 
+        id="header"
+        class="w-full h-[60px] bg-[#FAD06C] 
+               flex items-center 
+               text-[#293241] text-[20px] font-medium font1
+               fixed top-0 left-0
+               transition-all duration-500"
+    >
+
+        <a class="p-7">
+            Beranda
+        </a>
+
+        <a class="p-7">
+            Pertemuan 1
+        </a>
+
+    </div>
+
+    <script>
+
+        let aktif = true;
+
+        function toggleHeader(){
+
+            const header = document.getElementById("header");
+
+            if(aktif){
+
+                header.classList.add("-top-[100px]");
+
+                aktif = false;
+
+            } else {
+
+                header.classList.remove("-top-[100px]");
+
+                aktif = true;
+
+            }
+
+        }
+
+    </script>
+<a href="#" class="group relative w-8 h-8 block">
+
+    <!-- SVG NORMAL -->
+    <svg
+        class="absolute inset-0 group-hover:hidden"
+        width="30"
+        height="30"
+        viewBox="0 0 30 30"
+        xmlns="http://www.w3.org/2000/svg">
+
+        <circle cx="15" cy="15" r="12" fill="white"/>
+    </svg>
+
+    <!-- SVG HOVER -->
+    <svg
+        class="absolute inset-0 hidden group-hover:block"
+        width="30"
+        height="30"
+        viewBox="0 0 30 30"
+        xmlns="http://www.w3.org/2000/svg">
+
+        <rect x="5" y="5" width="20" height="20" fill="pink"/>
+    </svg>
+
+</a>
+</body>
+</html>

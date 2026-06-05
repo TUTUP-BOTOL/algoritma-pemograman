@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'coolvetica';
+    src: url('../font/NaughtyMonster.ttf') format('truetype');
+}
+
+.font1 {
+    font-family: 'coolvetica', sans-serif;
+}
+
+@font-face {
+    font-family: 'daily';
+    src: url('../font/DailyFlashback-Regular Demo.ttf') format('truetype');
+}
+
+.font2 {
+    font-family: 'daily', sans-serif;
+}
+
+@font-face {
+    font-family: 'urban';
+    src: url('../font/Urban Blocker PersonalUseOnly.ttf') format('truetype');
+}
+
+.font3 {
+    font-family: 'urban', sans-serif;
+}
+
+.poppnis {
+    font-family: 'Poppnis', sans-serif;
+}
+
+.outfit {
+    font-family: 'Outfit', sans-serif;
+}
+
+.fisi {
+    font-family: 'Roboto', sans-serif;
+}
+
+.kode-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.kode-scroll::-webkit-scrollbar-track {
+    background: #293241;
+}
+
+.kode-scroll::-webkit-scrollbar-thumb {
+    background: #FFA800;
+    border-radius: 9999px;
+}

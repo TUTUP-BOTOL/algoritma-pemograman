@@ -1,0 +1,132 @@
+<div class="w-full flex flex-col items-center">
+    <div class="w-[70%] border-2 border-l-[5px] border-[#293241] bg-white mt-8 p-7">
+        <h1 class="poppins text-[30px] font-bold text-center">Tugas Akhir Praktikum Algoritma Pemograman</h1>
+        <div class="mt-8">
+            <h1 class="popnis text-[20px] font-semibold">Sistem manajemen toko buku sederhana</h1>
+            <p class="indent-5 popnis border-l-[3px] border-[#FAD06C] pl-3 w-[90%]">Buat program Python untuk mengelola
+                data buku
+                di
+                sebuah toko kecil —> mencakup input data, pencarian,
+                pengurutan, dan laporan stok</p>
+        </div>
+
+        <div class="mt-8">
+            <h1 class="popnis text-[20px] font-semibold">Latar Belakang</h1>
+            <p class="indent-5 popnis border-l-[3px] border-[#FAD06C] pl-3 w-[90%]">
+                Toko Buku "Aksara" memiliki koleksi 10 buku. Setiap
+                buku memiliki judul, nama pengarang, harga (dalam rupiah), dan jumlah stok. Pemilik toko membutuhkan
+                program Python untuk mengelola data tersebut agar lebih mudah mencari, mengurutkan, dan memantau kondisi
+                stok.</p>
+        </div>
+
+        <div class="mt-8">
+            <h1 class="popnis text-[20px] font-semibold">Fitur Yang Harus Dibuat</h1>
+            <table class="w-[90%]">
+                <tbody>
+                    <tr>
+                        <td class=" w-[5%] align-top text-right pr-0 font-semibold p-2">1.</td>
+                        <td class=" w-[90%] p-2">
+                            Input data buku: Buat prosedur untuk mengisi data 10 buku ke dalam array. Validasi: harga
+                            harus > 0 dan
+                            stok tidak boleh negatif. </td>
+                    </tr>
+                    <tr>
+                        <td class=" w-[5%] align-top text-right pr-0 font-semibold p-2 ">2.</td>
+                        <td class=" w-[90%] p-2">Tampilkan semua buku: Buat prosedur untuk mencetak semua data buku
+                            dalam format tabel rapi (nomor,
+                            judul, pengarang, harga, stok).</td>
+                    </tr>
+                    <tr>
+                        <td class=" w-[5%] align-top text-right pr-0 font-semibold p-2 ">3.</td>
+                        <td class=" w-[90%] p-2">Hitung total nilai stok: Buat fungsi yang menghitung total nilai stok
+                            seluruh buku (harga x stok per
+                            buku, lalu dijumlahkan). Kembalikan nilainya. </td>
+                    </tr>
+                    <tr>
+                        <td class=" w-[5%] align-top text-right pr-0 font-semibold p-2 ">4.</td>
+                        <td class=" w-[90%] p-2">Urutkan berdasarkan harga: Urutkan data buku berdasarkan harga dari
+                            termurah ke termahal menggunakan
+                            Bubble Sort atau Selection Sort. </td>
+                    </tr>
+                    <tr>
+                        <td class=" w-[5%] align-top text-right pr-0 font-semibold p-2 ">5.</td>
+                        <td class=" w-[90%] p-2">Cari buku terurut by harga: Setelah data diurutkan berdasarkan harga,
+                            gunakan binary search untuk
+                            mencari buku dengan harga tertentu yang diinput pengguna. </td>
+                    </tr>
+                    <tr>
+                        <td class=" w-[5%] align-top text-right pr-0 font-semibold p-2 ">6.</td>
+                        <td class=" w-[90%] p-2">Urutkan berdasarkan stok: Urutkan data buku berdasarkan jumlah stok
+                            dari terbanyak ke tersedikit
+                            menggunakan Insertion Sort.</td>
+                    </tr>
+                    <tr>
+                        <td class=" w-[5%] align-top text-right pr-0 font-semibold p-2 ">7.</td>
+                        <td class=" w-[90%] p-2">Laporan stok menipis: Buat fungsi yang mengembalikan daftar buku dengan
+                            stok ≤ 3 (stok menipis).
+                            Tampilkan daftar tersebut beserta jumlahnya. </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- coding -->
+    <div class="bg-[#293241] w-[70%] p-5 rounded-2xl relative mt-8">
+        <p class="h-70px mb-[10px] font4 font-medium text-[#DFFBFC]">
+            KODE PROGRAM
+        </p>
+        <button onclick="copyCode()" class="absolute top-3 right-3 bg-blue-500 text-white px-3 py-1 rounded-lg">
+            Copy
+        </button>
+
+        <div class="h-[550px] bg-[#434040] text-[#DFFBFC] p-6 rounded-2xl overflow-x-auto kode-scroll">
+
+            <pre><code class="font-mono text-[15px]">
+                    # =====================================
+                    # SISTEM MANAJEMEN TOKO BUKU SEDERHANA
+                    # =====================================
+
+                    buku_list = []
+
+
+                    # 1. INPUT DATA BUKU
+                    def input_buku():
+                        print("\n=== INPUT DATA 10 BUKU ===")
+
+                        for i in range(10):
+                            print(f"\nData Buku ke-{i+1}")
+
+                            judul = input("Judul Buku      : ")
+                            pengarang = input("Nama Pengarang  : ")
+
+                            # Validasi harga
+                            while True:
+                                harga = int(input("Harga (Rp)      : "))
+                                if harga > 0:
+                                    break
+                                print("Harga harus lebih dari 0!")
+
+                            # Validasi stok
+                            while True:
+                                stok = int(input("Jumlah Stok     : "))
+                                if stok >= 0:
+                                    break
+                                print("Stok tidak boleh negatif!")
+
+                            buku = {
+                                "judul": judul,
+                                "pengarang": pengarang,
+                                "harga": harga,
+                                "stok": stok
+                            }
+
+                            buku_list.append(buku)
+
+
+                    </code></pre>
+
+        </div>
+
+    </div>
+</div>
