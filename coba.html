@@ -1,28 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
+
 <head>
-    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
-    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="luar/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
+
 <body>
+    <main>
+        <div class="flex gap-2 mb-4">
+            <button onclick="showPage('home')" class="px-4 py-2 bg-blue-500 text-white rounded">
+                Home
+            </button>
 
-<textarea id="code" rows="10" cols="50">
-print("Halo Dunia!")
-</textarea>
+            <button onclick="showPage('about')" class="px-4 py-2 bg-blue-500 text-white rounded">
+                About
+            </button>
+        </div>
 
-<button py-click="jalankan">Run</button>
+        <div id="home">
+            <h1>Halaman Home</h1>
+            <p>Isi halaman home.</p>
+        </div>
 
-<div id="output"></div>
+        <div id="about" class="hidden">
+            <h1>Halaman About</h1>
+            <p>Isi halaman about.</p>
+        </div>
 
-<py-script>
-from pyscript import document
+        <script>
+            function showPage(pageId) {
+                document.getElementById('home').classList.add('hidden');
+                document.getElementById('about').classList.add('hidden');
 
-def jalankan(event):
-    kode = document.getElementById("code").value
-    exec(kode)
-</py-script>
+                document.getElementById(pageId).classList.remove('hidden');
+            }
+        </script>
 
-<script src="https://cdn.jsdelivr.net/npm/brython@3/brython.min.js"></script>
+    </main>
 
+    <script src="luar/nav.js"></script>
+    <script src="luar/script.js"></script>
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 </body>
+
 </html>

@@ -1,9 +1,24 @@
-<div class="w-full flex flex-col items-center">
+<div class="flex w-100% justify-center gap-2 mb-4">
+    <button id="btn-home"
+        onclick="showPage('home')"
+        class="w-[150px] px-4 py-2 rounded bg-[#FAD06C] text-[#293241] border-2 border-[#293241]">
+        Implementasi
+    </button>
+
+    <button id="btn-about"
+        onclick="showPage('about')"
+        class="w-[150px] px-4 py-2 rounded bg-[#DFFBFC] text-[#293241] border-2 border-[#293241]">
+        Penjelasan
+    </button>
+</div>
+
+
+<div id="home" class="w-full flex flex-col items-center">
     <div class="w-[70%] border-2 border-l-[5px] border-[#293241] bg-white mt-8 p-7">
         <h1 class="poppins text-[30px] font-bold text-center">Tugas Akhir Praktikum Algoritma Pemograman</h1>
         <div class="mt-8">
-            <h1 class="popnis text-[20px] font-semibold">Sistem manajemen toko buku sederhana</h1>
-            <p class="indent-5 popnis border-l-[3px] border-[#FAD06C] pl-3 w-[90%]">Buat program Python untuk mengelola
+            <h1 class="manrope text-[20px] font-semibold">Sistem manajemen toko buku sederhana</h1>
+            <p class="indent-5 manrope border-l-[3px] border-[#FAD06C] pl-3 w-[90%]">Buat program Python untuk mengelola
                 data buku
                 di
                 sebuah toko kecil —> mencakup input data, pencarian,
@@ -11,8 +26,8 @@
         </div>
 
         <div class="mt-8">
-            <h1 class="popnis text-[20px] font-semibold">Latar Belakang</h1>
-            <p class="indent-5 popnis border-l-[3px] border-[#FAD06C] pl-3 w-[90%]">
+            <h1 class="manrope text-[20px] font-semibold">Latar Belakang</h1>
+            <p class="indent-5 manrope border-l-[3px] border-[#FAD06C] pl-3 w-[90%]">
                 Toko Buku "Aksara" memiliki koleksi 10 buku. Setiap
                 buku memiliki judul, nama pengarang, harga (dalam rupiah), dan jumlah stok. Pemilik toko membutuhkan
                 program Python untuk mengelola data tersebut agar lebih mudah mencari, mengurutkan, dan memantau kondisi
@@ -20,8 +35,8 @@
         </div>
 
         <div class="mt-8">
-            <h1 class="popnis text-[20px] font-semibold">Fitur Yang Harus Dibuat</h1>
-            <table class="w-[90%]">
+            <h1 class="manrope text-[20px] font-semibold">Fitur Yang Harus Dibuat</h1>
+            <table class="w-[90%] manrope">
                 <tbody>
                     <tr>
                         <td class=" w-[5%] align-top text-right pr-0 font-semibold p-2">1.</td>
@@ -71,62 +86,539 @@
         </div>
     </div>
 
-    <!-- coding -->
-    <div class="bg-[#293241] w-[70%] p-5 rounded-2xl relative mt-8">
-        <p class="h-70px mb-[10px] font4 font-medium text-[#DFFBFC]">
+    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+        <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
             KODE PROGRAM
         </p>
-        <button onclick="copyCode()" class="absolute top-3 right-3 bg-blue-500 text-white px-3 py-1 rounded-lg">
-            Copy
+        <button onclick="copyCode(this)" class="absolute top-3 right-3 px-3 py-1 rounded-lg">
+            <img src="gambar/copy.svg" alt="copy">
         </button>
 
-        <div class="h-[550px] bg-[#434040] text-[#DFFBFC] p-6 rounded-2xl overflow-x-auto kode-scroll">
+        <div class="max-h-[550px] text-[#DFFBFC] overflow-x-auto kode-scroll">
 
-            <pre><code class="font-mono text-[15px]">
-                    # =====================================
-                    # SISTEM MANAJEMEN TOKO BUKU SEDERHANA
-                    # =====================================
-
-                    buku_list = []
-
-
-                    # 1. INPUT DATA BUKU
-                    def input_buku():
-                        print("\n=== INPUT DATA 10 BUKU ===")
-
-                        for i in range(10):
-                            print(f"\nData Buku ke-{i+1}")
-
-                            judul = input("Judul Buku      : ")
-                            pengarang = input("Nama Pengarang  : ")
-
-                            # Validasi harga
-                            while True:
-                                harga = int(input("Harga (Rp)      : "))
-                                if harga > 0:
-                                    break
-                                print("Harga harus lebih dari 0!")
-
-                            # Validasi stok
-                            while True:
-                                stok = int(input("Jumlah Stok     : "))
-                                if stok >= 0:
-                                    break
-                                print("Stok tidak boleh negatif!")
-
-                            buku = {
-                                "judul": judul,
-                                "pengarang": pengarang,
-                                "harga": harga,
-                                "stok": stok
-                            }
-
-                            buku_list.append(buku)
-
-
-                    </code></pre>
+            <pre><code class="language-python">
+    # =====================================
+    # SISTEM MANAJEMEN TOKO BUKU SEDERHANA
+    # =====================================
+    
+    buku_list = []
+    
+    
+    # 1. INPUT DATA BUKU
+    def input_buku():
+        print("\n=== INPUT DATA 10 BUKU ===")
+    
+        for i in range(10):
+            print(f"\nData Buku ke-{i+1}")
+    
+            judul = input("Judul Buku      : ")
+            pengarang = input("Nama Pengarang  : ")
+    
+            # Validasi harga
+            while True:
+                harga = int(input("Harga (Rp)      : "))
+                if harga > 0:
+                    break
+                print("Harga harus lebih dari 0!")
+    
+            # Validasi stok
+            while True:
+                stok = int(input("Jumlah Stok     : "))
+                if stok >= 0:
+                    break
+                print("Stok tidak boleh negatif!")
+    
+            buku = {
+                "judul": judul,
+                "pengarang": pengarang,
+                "harga": harga,
+                "stok": stok
+            }
+    
+            buku_list.append(buku)
+    
+    
+    # TAMPILKAN SEMUA BUKU
+    def tampilkan_buku(data):
+        print("\n=== DATA BUKU ===")
+    
+        print("-" * 90)
+        print(f"{'No':&lt;5}{'Judul':&lt;25}{'Pengarang':&lt;20}{'Harga':&lt;15}{'Stok':&lt;10}")
+        print("-" * 90)
+    
+        for i, buku in enumerate(data, start=1):
+            print(
+                f"{i:&lt;5}"
+                f"{buku['judul']:&lt;25}"
+                f"{buku['pengarang']:&lt;20}"
+                f"Rp {buku['harga']:&lt;12}"
+                f"{buku['stok']:&lt;10}"
+            )
+    
+        print("-" * 90)
+    
+    
+    # HITUNG TOTAL NILAI STOK
+    def hitung_total_nilai_stok(data):
+        total = 0
+    
+        for buku in data:
+            total += buku["harga"] * buku["stok"]
+    
+        return total
+    
+    # 
+    def bubble_sort_harga(data):
+        n = len(data)
+    
+        for i in range(n - 1):
+            for j in range(n - i - 1):
+                if data[j]["harga"] > data[j + 1]["harga"]:
+                    data[j], data[j + 1] = data[j + 1], data[j]
+    
+    
+    # BINARY SEARCH BERDASARKAN HARGA
+    def binary_search_harga(data, target):
+        kiri = 0
+        kanan = len(data) - 1
+    
+        while kiri &lt;= kanan:
+            tengah = (kiri + kanan) // 2
+    
+            if data[tengah]["harga"] == target:
+                return tengah
+            elif data[tengah]["harga"] &lt; target:
+                kiri = tengah + 1
+            else:
+                kanan = tengah - 1
+    
+        return -1
+    
+    
+    # URUTKAN BERDASARKAN STOK
+    def insertion_sort_stok(data):
+        for i in range(1, len(data)):
+            key = data[i]
+            j = i - 1
+    
+            while j >= 0 and data[j]["stok"] &lt; key["stok"]:
+                data[j + 1] = data[j]
+                j -= 1
+    
+            data[j + 1] = key
+    
+    
+    # LAPORAN
+    def stok_menipis(data):
+        hasil = []
+    
+        for buku in data:
+            if buku["stok"] &lt;= 3:
+                hasil.append(buku)
+    
+        return hasil
+    
+    
+    # ----
+    
+    input_buku()
+    
+    while True:
+        print("\n=== MENU ===")
+        print("1. Tampilkan Semua Buku")
+        print("2. Total Nilai Stok")
+        print("3. Urutkan Berdasarkan Harga")
+        print("4. Cari Buku Berdasarkan Harga")
+        print("5. Urutkan Berdasarkan Stok")
+        print("6. Laporan Stok Menipis")
+        print("7. Keluar")
+    
+        pilihan = input("Pilih menu : ")
+    
+        if pilihan == "1":
+            tampilkan_buku(buku_list)
+    
+        elif pilihan == "2":
+            total = hitung_total_nilai_stok(buku_list)
+            print(f"\nTotal Nilai Stok = Rp {total:,}")
+    
+        elif pilihan == "3":
+            bubble_sort_harga(buku_list)
+            print("\nData berhasil diurutkan berdasarkan harga.")
+            tampilkan_buku(buku_list)
+    
+        elif pilihan == "4":
+            bubble_sort_harga(buku_list)
+    
+            harga_cari = int(input("Masukkan harga yang dicari: "))
+    
+            posisi = binary_search_harga(buku_list, harga_cari)
+    
+            if posisi != -1:
+                buku = buku_list[posisi]
+    
+                print("\nBuku ditemukan:")
+                print("Judul      :", buku["judul"])
+                print("Pengarang  :", buku["pengarang"])
+                print("Harga      :", buku["harga"])
+                print("Stok       :", buku["stok"])
+            else:
+                print("Buku dengan harga tersebut tidak ditemukan.")
+    
+        elif pilihan == "5":
+            insertion_sort_stok(buku_list)
+            print("\nData berhasil diurutkan berdasarkan stok.")
+            tampilkan_buku(buku_list)
+    
+        elif pilihan == "6":
+            daftar = stok_menipis(buku_list)
+    
+            print("\n=== LAPORAN STOK MENIPIS ===")
+    
+            if len(daftar) == 0:
+                print("Tidak ada stok menipis.")
+            else:
+                tampilkan_buku(daftar)
+                print(f"Jumlah buku stok menipis: {len(daftar)}")
+    
+        elif pilihan == "7":
+            print("Program selesai.")
+            break
+    
+        else:
+            print("Pilihan tidak valid!")
+            </code></pre>
 
         </div>
-
     </div>
+</div>
+
+<div id="about" class="w-full flex flex-col items-center">
+
+    <!-- soal no 1 -->
+    <div class=" w-[70%] mt-8 relative pt-4">
+        <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">1. Input Data Buku</h1>
+        <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
+            <ul class="space-y-4">
+                <li>for i in range(10) digunakan karena jumlah buku yang harus dimasukkan adalah 10 buku, sehingga
+                    perulangan dilakukan tepat 10 kali.</li>
+                <li>while True digunakan untuk validasi input, agar pengguna tidak dapat memasukkan harga ≤ 0 atau stok
+                    negatif.</li>
+                <li>Data buku disimpan dalam dictionary karena setiap buku memiliki beberapa atribut (judul, pengarang,
+                    harga, stok).</li>
+                <li>Semua dictionary disimpan dalam list sehingga mudah diakses dan diolah.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+        <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
+            kode python - Input Data Buku -
+        </p>
+        <button onclick="copyCode(this)" class="absolute top-3 right-3 px-3 py-1 rounded-lg">
+            <img src="gambar/copy.svg" alt="copy">
+        </button>
+        <div class="h-[555px] text-[#DFFBFC] overflow-x-auto kode-scroll">
+            <pre><code class="language-python">
+    buku_list = []
+    # input buku
+    def input_buku():
+        print("\n=== INPUT DATA 10 BUKU ===")
+
+        for i in range(10):
+            print(f"\nData Buku ke-{i+1}")
+
+            judul = input("Judul Buku      : ")
+            pengarang = input("Nama Pengarang  : ")
+
+            # Validasi harga
+            while True:
+                harga = int(input("Harga (Rp)      : "))
+                if harga > 0:
+                    break
+                print("Harga harus lebih dari 0!")
+
+            # Validasi stok
+            while True:
+                stok = int(input("Jumlah Stok     : "))
+                if stok >= 0:
+                    break
+                print("Stok tidak boleh negatif!")
+
+            buku = {
+                "judul": judul,
+                "pengarang": pengarang,
+                "harga": harga,
+                "stok": stok
+            }
+
+            buku_list.append(buku)
+                </code></pre>
+        </div>
+    </div>
+
+    <!-- soal no 2 -->
+    <div class=" w-[70%] mt-8 relative pt-4">
+        <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">2. Menampilkan semua buku</h1>
+        <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
+            <ul class="space-y-4">
+                <li>Menggunakan perulangan for karena seluruh data buku harus ditampilkan satu per satu.</li>
+                <li>enumerate() digunakan untuk membuat nomor urut otomatis.</li>
+                <li>Format string (f-string) digunakan agar tampilan menjadi rapi seperti tabel.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+        <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
+            kode python - Menampilkan Semua Buku -
+        </p>
+        <button onclick="copyCode(this)" class="absolute top-3 right-3 px-3 py-1 rounded-lg">
+            <img src="gambar/copy.svg" alt="copy">
+        </button>
+        <div class="max-h-[555px] text-[#DFFBFC] overflow-x-auto kode-scroll">
+            <pre><code class="language-python">
+    def tampilkan_buku(data):
+    print("\n=== DATA BUKU ===")
+
+    print("-" * 90)
+    print(f"{'No':&lt;5}{'Judul':&lt;25}{'Pengarang':&lt;20}{'Harga':&lt;15}{'Stok':&lt;10}")
+    print("-" * 90)
+
+    for i, buku in enumerate(data, start=1):
+        print(
+            f"{i:&lt;5}"
+            f"{buku['judul']:&lt;25}"
+            f"{buku['pengarang']:&lt;20}"
+            f"Rp {buku['harga']:&lt;12}"
+            f"{buku['stok']:&lt;10}"
+        )
+
+    print("-" * 90)
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- soal no 3 -->
+    <div class=" w-[70%] mt-8 relative pt-4">
+        <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">3. Hitung Total Nilai Stok</h1>
+        <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
+            <ul class="space-y-4">
+                <li>Nilai stok suatu buku diperoleh dari: Nilai Stok=Harga x Stok</li>
+                <li>Karena semua buku harus dihitung, digunakan perulangan for.</li>
+                <li>Variabel total digunakan sebagai akumulator untuk menjumlahkan seluruh nilai stok.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+        <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
+            kode python - Menghitung Total Nilai Stok -
+        </p>
+        <button onclick="copyCode(this)" class="absolute top-3 right-3 px-3 py-1 rounded-lg">
+            <img src="gambar/copy.svg" alt="copy">
+        </button>
+        <div class="max-h-[555px] text-[#DFFBFC] overflow-x-auto kode-scroll">
+            <pre><code class="language-python">
+    
+# HITUNG TOTAL NILAI STOK
+def hitung_total_nilai_stok(data):
+    total = 0
+
+    for buku in data:
+        total += buku["harga"] * buku["stok"]
+
+    return total
+
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- soal no 4 -->
+    <div class=" w-[70%] mt-8 relative pt-4">
+        <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">4. Urutkan Berdasarkan Harga</h1>
+        <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
+            <ul class="space-y-4">
+                <li>Soal meminta menggunakan Bubble Sort atau Selection Sort.
+                    Saya memilih Bubble Sort karena mudah dipahami dan cocok untuk jumlah data yang sedikit (10 buku).
+                </li>
+                <li>Bubble Sort bekerja dengan membandingkan dua data yang bersebelahan lalu menukarnya jika tidak
+                    sesuai urutan.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+        <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
+            kode python - Mengurutkan Berdasarkan Harga -
+        </p>
+        <button onclick="copyCode(this)" class="absolute top-3 right-3 px-3 py-1 rounded-lg">
+            <img src="gambar/copy.svg" alt="copy">
+        </button>
+        <div class="max-h-[555px] text-[#DFFBFC] overflow-x-auto kode-scroll">
+            <pre><code class="language-python">
+    
+# mengurutkan berdasarkan harga
+def bubble_sort_harga(data):
+    n = len(data)
+
+    for i in range(n - 1):
+        for j in range(n - i - 1):
+            if data[j]["harga"] > data[j + 1]["harga"]:
+                data[j], data[j + 1] = data[j + 1], data[j]
+
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- soal no 5 -->
+    <div class=" w-[70%] mt-8 relative pt-4">
+        <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">5. Cari Buku Terurut by Harga</h1>
+        <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
+            <ul class="space-y-4">
+                <li>Binary Search lebih cepat dibanding pencarian biasa karena langsung memeriksa bagian tengah data.
+                </li>
+                <li>Syarat Binary Search adalah data harus sudah terurut terlebih dahulu.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+        <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
+            kode python - Mencari Buku Berdasarkan Harga -
+        </p>
+        <button onclick="copyCode(this)" class="absolute top-3 right-3 px-3 py-1 rounded-lg">
+            <img src="gambar/copy.svg" alt="copy">
+        </button>
+        <div class="max-h-[555px] text-[#DFFBFC] overflow-x-auto kode-scroll">
+            <pre><code class="language-python">
+    # BINARY SEARCH BERDASARKAN HARGA
+    def binary_search_harga(data, target):
+        kiri = 0
+        kanan = len(data) - 1
+
+        while kiri &lt;= kanan:
+            tengah = (kiri + kanan) // 2
+
+            if data[tengah]["harga"] == target:
+                return tengah
+            elif data[tengah]["harga"] &lt; target:
+                kiri = tengah + 1
+            else:
+                kanan = tengah - 1
+
+        return -1
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- soal no 6 -->
+    <div class=" w-[70%] mt-8 relative pt-4">
+        <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">6. Urutkan Berdasarkan Stok</h1>
+        <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
+            <ul class="space-y-4">
+                <li>Insertion Sort cocok untuk data berukuran kecil.</li>
+                <li>Cara kerjanya seperti menyusun kartu remi di tangan, yaitu menyisipkan data pada posisi yang tepat.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+        <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
+            kode python - Mencari Buku Berdasarkan Harga -
+        </p>
+        <button onclick="copyCode(this)" class="absolute top-3 right-3 px-3 py-1 rounded-lg">
+            <img src="gambar/copy.svg" alt="copy">
+        </button>
+        <div class="max-h-[555px] text-[#DFFBFC] overflow-x-auto kode-scroll">
+            <pre><code class="language-python">
+    # URUTKAN BERDASARKAN STOK
+    def insertion_sort_stok(data):
+        for i in range(1, len(data)):
+            key = data[i]
+            j = i - 1
+
+            while j >= 0 and data[j]["stok"] &lt; key["stok"]:
+                data[j + 1] = data[j]
+                j -= 1
+
+            data[j + 1] = key
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- soal no 7 -->
+    <div class=" w-[70%] mt-8 relative pt-4">
+        <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">7. Urutkan Berdasarkan Stok</h1>
+        <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
+            <ul class="space-y-4">
+                <li>stok menipis adalah stok yang jumlahnya kurang dari sama dengan 3</li>
+                <li>Program memeriksa seluruh buku menggunakan perulangan for</li>
+                <li>Jika memenuhi syarat, buku dimasukkan ke dalam list hasil</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+        <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
+            kode python - Mencari Buku Berdasarkan Harga -
+        </p>
+        <button onclick="copyCode(this)" class="absolute top-3 right-3 px-3 py-1 rounded-lg">
+            <img src="gambar/copy.svg" alt="copy">
+        </button>
+        <div class="max-h-[555px] text-[#DFFBFC] overflow-x-auto kode-scroll">
+            <pre><code class="language-python">
+    # LAPORAN
+    def stok_menipis(data):
+        hasil = []
+
+        for buku in data:
+            if buku["stok"] &lt;= 3:
+                hasil.append(buku)
+
+        return hasil
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- soal no 7 -->
+    <div class=" w-[70%] mt-8 relative pt-4">
+        <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">7. Urutkan Berdasarkan Stok</h1>
+        <div class="border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl overflow-hidden">
+            <div class="max-h-[555px] p-3 overflow-x-auto kode-scroll">
+                input_buku() untuk memasukkan data 10 buku. Setelah itu, program menggunakan perulangan while True agar
+                menu terus ditampilkan sampai pengguna memilih keluar. <br>
+                Perintah input_buku() digunakan untuk mengisi data awal buku. Perulangan while True digunakan agar
+                program tetap berjalan dan pengguna dapat menggunakan menu berulang kali tanpa harus menjalankan ulang
+                program. Variabel pilihan digunakan untuk menyimpan menu yang dipilih pengguna. <br>
+                Selanjutnya digunakan percabangan if-elif-else untuk menentukan fitur yang akan dijalankan berdasarkan
+                pilihan pengguna. <br>
+                <br> Jika pengguna memilih menu 1, program memanggil prosedur tampilkan_buku() untuk menampilkan seluruh
+                data buku dalam bentuk tabel. <br>
+                <br> Jika pengguna memilih menu 2, program memanggil fungsi hitung_total_nilai_stok(). Nilai yang
+                dikembalikan oleh fungsi disimpan ke variabel total, kemudian ditampilkan kepada pengguna. <br>
+                <br> Jika pengguna memilih menu 3, program menjalankan algoritma Bubble Sort untuk mengurutkan buku
+                berdasarkan harga dari termurah ke termahal. Setelah proses pengurutan selesai, data ditampilkan
+                kembali. <br>
+                <br> Pada menu 4, data terlebih dahulu diurutkan menggunakan Bubble Sort karena Binary Search hanya
+                dapat digunakan pada data yang sudah terurut. Setelah pengguna memasukkan harga yang dicari, program
+                menjalankan fungsi binary_search_harga(). Jika data ditemukan, informasi buku ditampilkan. Jika tidak
+                ditemukan, program menampilkan pesan bahwa data tidak tersedia. <br>
+                <br> Jika pengguna memilih menu 6, program memanggil fungsi stok_menipis() untuk mencari buku yang
+                memiliki stok kurang dari atau sama dengan 3. Jika tidak ada data yang memenuhi syarat, program
+                menampilkan pesan bahwa tidak ada stok menipis. Jika ada, daftar buku tersebut beserta jumlahnya akan
+                ditampilkan. <br>
+                <br> Jika pengguna memilih menu 7, program menampilkan pesan selesai kemudian menjalankan perintah break
+                untuk menghentikan perulangan while True, sehingga program berakhir. <br>
+                <br> else digunakan untuk menangani input yang tidak sesuai dengan pilihan menu yang tersedia. Jika
+                pengguna memasukkan angka selain 1 sampai 7, program akan menampilkan pesan kesalahan dan kembali ke
+                menu utama
+            </div>
+        </div>
+    </div>
+
+    <!-- coding -->
+
+
 </div>

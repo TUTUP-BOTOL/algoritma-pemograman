@@ -10,6 +10,7 @@ async function loadContent(file) {
         const html = await res.text();
         setTimeout(() => {
             contentDiv.innerHTML = html;
+            Prism.highlightAll();
             contentDiv.classList.add('show');
         }, 300);
     } catch (err) {
@@ -20,17 +21,17 @@ async function loadContent(file) {
 // Event tombol
 btnthesis.addEventListener('click', () => {
     loadContent('thesis.html');
-    btnthesis.classList.add('text-white', );
+    btnthesis.classList.add('text-white',);
     btnthesis.classList.remove('text-black',);
-    btntg1.classList.remove('text-white', );
+    btntg1.classList.remove('text-white',);
     btntg1.classList.add('border-0', 'text-black');
 });
 
 btntg1.addEventListener('click', () => {
     loadContent('tugas1.html');
-    btntg1.classList.add('text-white', );
+    btntg1.classList.add('text-white',);
     btntg1.classList.remove('text-black',);
-    btnthesis.classList.remove('text-white', );
+    btnthesis.classList.remove('text-white',);
     btnthesis.classList.add('border-0', 'text-black');
 });
 
