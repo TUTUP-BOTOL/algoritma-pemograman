@@ -14,17 +14,37 @@ closeProfile.addEventListener("click", () => {
     profileBox.classList.remove("flex");
 });
 
-// function copyCode() {
-//     const code = document.getElementById("myCode").innerText;
-//     navigator.clipboard.writeText(code);
 
+
+
+
+// function copyCode(button) {
+//     const pre = button.parentElement.querySelector('pre');
+//     navigator.clipboard.writeText(pre.innerText);
 //     alert("Code berhasil dicopy!");
 // }
+
 function copyCode(button) {
     const pre = button.parentElement.querySelector('pre');
     navigator.clipboard.writeText(pre.innerText);
-    alert("Code berhasil dicopy!");
+
+    const toast = document.createElement('div');
+
+    toast.textContent = '✅ Code berhasil dicopy!';
+    toast.className = `
+        fixed bottom-5 left-1/2 -translate-x-1/2
+        bg-black text-white
+        px-4 py-2 rounded-lg
+        z-50
+    `;
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.remove();
+    }, 2000);
 }
+
 
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");

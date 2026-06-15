@@ -42,3 +42,21 @@
 //         btn.classList.remove('text-white');
 //     });
 // });
+
+<script>
+        const profileBtn = document.getElementById("profileBtn");
+        const profileBox = document.getElementById("profileBox");
+        const closeProfile = document.getElementById("closeProfile");
+
+        // buka popup
+        profileBtn.addEventListener("click", () => {
+            profileBox.classList.remove("hidden");
+            profileBox.classList.add("flex");
+        });
+
+        // tutup popup
+        closeProfile.addEventListener("click", () => {
+            profileBox.classList.add("hidden");
+            profileBox.classList.remove("flex");
+        });
+    </script>
