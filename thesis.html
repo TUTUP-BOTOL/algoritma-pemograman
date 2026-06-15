@@ -1,20 +1,23 @@
 <div class="flex w-100% justify-center gap-2 mb-4">
-    <button id="btn-home"
-        onclick="showPage('home')"
+    <button id="btn-home" onclick="showPage('home')"
         class="w-[150px] px-4 py-2 rounded bg-[#FAD06C] text-[#293241] border-2 border-[#293241]">
         Implementasi
     </button>
 
-    <button id="btn-about"
-        onclick="showPage('about')"
+    <button id="btn-about" onclick="showPage('about')"
         class="w-[150px] px-4 py-2 rounded bg-[#DFFBFC] text-[#293241] border-2 border-[#293241]">
         Penjelasan
+    </button>
+
+    <button id="btn-run" onclick="showPage('run')"
+        class="w-[150px] px-4 py-2 rounded bg-[#DFFBFC] text-[#293241] border-2 border-[#293241]">
+        Run/Hasil
     </button>
 </div>
 
 
 <div id="home" class="w-full flex flex-col items-center">
-    <div class="w-[70%] border-2 border-l-[5px] border-[#293241] bg-white mt-8 p-7">
+    <div class="sm:w-full lg:w-[70%] border-2 border-l-[5px] border-[#293241] bg-white mt-8 p-7">
         <h1 class="poppins text-[30px] font-bold text-center">Tugas Akhir Praktikum Algoritma Pemograman</h1>
         <div class="mt-8">
             <h1 class="manrope text-[20px] font-semibold">Sistem manajemen toko buku sederhana</h1>
@@ -86,7 +89,7 @@
         </div>
     </div>
 
-    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+    <div class="w-full md:w-[70%] bg-[#293241] pt-5 rounded-2xl relative mt-8 overflow-hidden">
         <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
             KODE PROGRAM
         </p>
@@ -293,10 +296,10 @@
     </div>
 </div>
 
-<div id="about" class="w-full flex flex-col items-center">
+<div id="about" class="w-full flex flex-col items-center hidden">
 
     <!-- soal no 1 -->
-    <div class=" w-[70%] mt-8 relative pt-4">
+    <div class=" w-full md:w-[70%] mt-8 relative pt-4">
         <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">1. Input Data Buku</h1>
         <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
             <ul class="space-y-4">
@@ -311,7 +314,7 @@
         </div>
     </div>
 
-    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+    <div class="bg-[#293241] w-full md:w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
         <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
             kode python - Input Data Buku -
         </p>
@@ -358,7 +361,7 @@
     </div>
 
     <!-- soal no 2 -->
-    <div class=" w-[70%] mt-8 relative pt-4">
+    <div class=" w-full md:w-[70%] mt-8 relative pt-4">
         <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">2. Menampilkan semua buku</h1>
         <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
             <ul class="space-y-4">
@@ -369,7 +372,7 @@
         </div>
     </div>
 
-    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+    <div class="bg-[#293241] w-full md:w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
         <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
             kode python - Menampilkan Semua Buku -
         </p>
@@ -400,7 +403,7 @@
     </div>
 
     <!-- soal no 3 -->
-    <div class=" w-[70%] mt-8 relative pt-4">
+    <div class=" w-full md:w-[70%] mt-8 relative pt-4">
         <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">3. Hitung Total Nilai Stok</h1>
         <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
             <ul class="space-y-4">
@@ -411,7 +414,7 @@
         </div>
     </div>
 
-    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+    <div class="bg-[#293241] w-full md:w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
         <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
             kode python - Menghitung Total Nilai Stok -
         </p>
@@ -435,7 +438,7 @@ def hitung_total_nilai_stok(data):
     </div>
 
     <!-- soal no 4 -->
-    <div class=" w-[70%] mt-8 relative pt-4">
+    <div class=" w-full md:w-[70%] mt-8 relative pt-4">
         <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">4. Urutkan Berdasarkan Harga</h1>
         <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
             <ul class="space-y-4">
@@ -448,7 +451,7 @@ def hitung_total_nilai_stok(data):
         </div>
     </div>
 
-    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+    <div class="bg-[#293241] w-full md:w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
         <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
             kode python - Mengurutkan Berdasarkan Harga -
         </p>
@@ -472,7 +475,7 @@ def bubble_sort_harga(data):
     </div>
 
     <!-- soal no 5 -->
-    <div class=" w-[70%] mt-8 relative pt-4">
+    <div class=" w-full md:w-[70%] mt-8 relative pt-4">
         <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">5. Cari Buku Terurut by Harga</h1>
         <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
             <ul class="space-y-4">
@@ -483,7 +486,7 @@ def bubble_sort_harga(data):
         </div>
     </div>
 
-    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+    <div class="bg-[#293241] w-full md:w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
         <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
             kode python - Mencari Buku Berdasarkan Harga -
         </p>
@@ -513,7 +516,7 @@ def bubble_sort_harga(data):
     </div>
 
     <!-- soal no 6 -->
-    <div class=" w-[70%] mt-8 relative pt-4">
+    <div class=" w-full md:w-[70%] mt-8 relative pt-4">
         <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">6. Urutkan Berdasarkan Stok</h1>
         <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
             <ul class="space-y-4">
@@ -524,7 +527,7 @@ def bubble_sort_harga(data):
         </div>
     </div>
 
-    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+    <div class="bg-[#293241] w-full md:w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
         <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
             kode python - Mencari Buku Berdasarkan Harga -
         </p>
@@ -549,7 +552,7 @@ def bubble_sort_harga(data):
     </div>
 
     <!-- soal no 7 -->
-    <div class=" w-[70%] mt-8 relative pt-4">
+    <div class=" w-full md:w-[70%] mt-8 relative pt-4">
         <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">7. Urutkan Berdasarkan Stok</h1>
         <div class="manrope border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl pt-[30px] p-3">
             <ul class="space-y-4">
@@ -560,7 +563,7 @@ def bubble_sort_harga(data):
         </div>
     </div>
 
-    <div class="bg-[#293241] w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+    <div class="bg-[#293241] w-full md:w-[70%] pt-5 rounded-2xl relative mt-8 overflow-hidden">
         <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
             kode python - Mencari Buku Berdasarkan Harga -
         </p>
@@ -583,7 +586,7 @@ def bubble_sort_harga(data):
     </div>
 
     <!-- soal no 7 -->
-    <div class=" w-[70%] mt-8 relative pt-4">
+    <div class=" w-full md:w-[70%] mt-8 relative pt-4">
         <h1 class="poppnis font-bold text-[20px] bg-[#DFFBFC] absolute top-0 pr-2">7. Urutkan Berdasarkan Stok</h1>
         <div class="border-2 border-[#293241] rounded-bl-2xl rounded-tr-2xl overflow-hidden">
             <div class="max-h-[555px] p-3 overflow-x-auto kode-scroll">
@@ -620,5 +623,9 @@ def bubble_sort_harga(data):
 
     <!-- coding -->
 
+
+</div>
+
+<div id="run" class="w-full flex flex-col items-center hidden">
 
 </div>

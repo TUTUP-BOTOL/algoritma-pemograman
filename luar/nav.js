@@ -1,6 +1,8 @@
 const contentDiv = document.getElementById('content');
+const btnHm = document.getElementById('btn-hm');
 const btnthesis = document.getElementById('btn-thesis');
 const btntg1 = document.getElementById('btn-tg1');
+const btntg2 = document.getElementById('btn-tg2');
 
 // Fungsi untuk load isi dari file luar
 async function loadContent(file) {
@@ -17,24 +19,50 @@ async function loadContent(file) {
         contentDiv.innerHTML = `<p class="text-red-600">Gagal memuat konten: ${file}</p>`;
     }
 }
+document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
 
-// Event tombol
-btnthesis.addEventListener('click', () => {
-    loadContent('thesis.html');
-    btnthesis.classList.add('text-white',);
-    btnthesis.classList.remove('text-black',);
-    btntg1.classList.remove('text-white',);
-    btntg1.classList.add('border-0', 'text-black');
-});
+        // Load halaman
+        loadContent(btn.dataset.page);
 
-btntg1.addEventListener('click', () => {
-    loadContent('tugas1.html');
-    btntg1.classList.add('text-white',);
-    btntg1.classList.remove('text-black',);
-    btnthesis.classList.remove('text-white',);
-    btnthesis.classList.add('border-0', 'text-black');
+        // Hapus status aktif dari semua tombol
+        document.querySelectorAll('.nav-btn').forEach(item => {
+            item.classList.remove('text-white');
+            item.classList.add('text-black');
+        });
+
+        // Aktifkan tombol yang diklik
+        btn.classList.remove('text-black');
+        btn.classList.add('text-white');
+    });
 });
 
 // Tampilkan project pertama kali
-loadContent('thesis.html');
-btnthesis.classList.add('text-white',);
+loadContent('home.html');
+
+document.querySelectorAll('.nav-btn').forEach(btn => {
+    if (btn.dataset.page === 'home.html') {
+        btn.classList.remove('text-black');
+        btn.classList.add('text-white');
+    }
+});
+
+
+
+const barBtn = document.getElementById('bar-btn');
+const closeBtn = document.getElementById('close-bar');
+const sidebar = document.getElementById('sidebar');
+
+barBtn.addEventListener('click', () => {
+    sidebar.classList.remove('-translate-x-full');
+});
+
+closeBtn.addEventListener('click', () => {
+    sidebar.classList.add('-translate-x-full');
+});
+
+document.querySelectorAll('#sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+        sidebar.classList.add('-translate-x-full');
+    });
+});

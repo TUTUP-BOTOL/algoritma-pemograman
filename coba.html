@@ -1,60 +1,58 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Link Tailwind -->
+    <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="luar/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 
 <body>
-    <main>
-        <div class="flex gap-2 mb-4">
-            <button onclick="showPage('home')" class="px-4 py-2 bg-blue-500 text-white rounded">
-                Home
+    <div class="w-full h-[200px] bg-yellow-400">
+
+        cook cok
+    </div>
+    <button id="bar-btn" class="lg:hidden fixed top-4 left-4 z-50 bg-[#FAD06C] px-4 py-2 rounded-lg">
+        ☰ Menu
+    </button>
+    <div class="lg:hidden">
+        <div id="sidebar" class="w-[250px] h-screen bg-[#FAD06C]
+                flex flex-col
+                text-[#293241] text-[20px] font-medium font1  transform -translate-x-full transition-transform duration-300 z-40
+                fixed top-0 left-0 z-50">
+            <button id="close-btn" class="text-right p-4 text-2xl">
+                ✕
             </button>
 
-            <button onclick="showPage('about')" class="px-4 py-2 bg-blue-500 text-white rounded">
-                About
-            </button>
+            <a data-page="home.html" class="nav-btn p-4 md:p-7">Beranda</a>
+            <a data-page="tugas1.html" class="nav-btn p-4 md:p-7">Looping</a>
+            <a data-page="tugas2.html" class="nav-btn p-4 md:p-7">Array</a>
+            <a data-page="thesis.html" class="nav-btn p-4 md:p-7">Praktikum Akhir</a>
+
         </div>
+    </div>
 
-        <div id="home">
-            <h1>Halaman Home</h1>
-            <p>Isi halaman home.</p>
-        </div>
+    <script>
+        const barBtn = document.getElementById('bar-btn');
+        const closeBtn = document.getElementById('close-bar');
+        const sidebar = document.getElementById('sidebar');
 
-        <div id="about" class="hidden">
-            <h1>Halaman About</h1>
-            <p>Isi halaman about.</p>
-        </div>
+        barBtn.addEventListener('click', () => {
+            sidebar.classList.remove('-translate-x-full');
+        });
 
-        <script>
-            function showPage(pageId) {
-                document.getElementById('home').classList.add('hidden');
-                document.getElementById('about').classList.add('hidden');
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+        });
 
-                document.getElementById(pageId).classList.remove('hidden');
-            }
-        </script>
-
-    </main>
-
-    <script src="luar/nav.js"></script>
-    <script src="luar/script.js"></script>
-    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+        document.querySelectorAll('#sidebar a').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.add('-translate-x-full');
+            });
+        });
+    </script>
 </body>
 
 </html>
