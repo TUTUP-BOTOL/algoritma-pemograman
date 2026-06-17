@@ -1,0 +1,30 @@
+<div class="w-full flex justify-center">
+    <div class="w-full md:w-[70%]">
+        
+        <div class="bg-[#293241] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+            <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
+                KODE PROGRAM
+            </p>
+            <button onclick="copyCode(this)" class="absolute top-3 right-3 px-3 py-1 rounded-lg">
+                <img src="gambar/copy.svg" alt="copy">
+            </button>
+
+            <div class="h-max-[550px] text-[#DFFBFC] overflow-x-auto kode-scroll">
+                <pre><code class="language-python">
+    penjualan = [150000, 200000, 175000, 300000, 250000, 400000, 350000]
+
+    hari = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"]
+
+    print("Laporan Penjualan Mingguan")
+
+    for i in range(len(penjualan)):
+        print(f"{hari[i]} : Rp{penjualan[i]:,}")
+
+    print("\nTotal Penjualan:", sum(penjualan))
+    print("Penjualan Tertinggi:", max(penjualan))
+    print("Penjualan Terendah:", min(penjualan))
+                </code></pre>
+            </div>
+        </div>
+    </div>
+</div>
