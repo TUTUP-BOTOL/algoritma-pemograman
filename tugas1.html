@@ -1,6 +1,124 @@
 <div class="w-full flex justify-center">
 
     <div class="w-full md:w-[70%]">
+        <div class="p-4 bg-white border-[#293241] border-[2px] border-l-[5px] rounded-2xl shadow-xl">
+
+            <h1 class="text-center text-xl font-bold animate-pulse">
+                LOOPING (PERULANGAN)
+            </h1>
+
+            <p class="mt-4 indent-5">
+                Looping atau perulangan adalah proses menjalankan suatu instruksi
+                secara berulang-ulang sampai kondisi tertentu terpenuhi.
+                Perulangan digunakan agar penulisan program lebih efisien dan
+                menghindari penulisan kode yang berulang.
+            </p>
+
+        </div>
+
+        <!-- FOR -->
+        <div class="p-4 bg-white border-[#293241] border-[2px] border-l-[5px] rounded-2xl shadow-xl mt-8">
+
+            <h2 class="font-bold text-lg">
+                1. Perulangan Struktur For
+            </h2>
+
+            <p class="mt-4 indent-5">
+                Perulangan For digunakan ketika jumlah perulangan sudah diketahui
+                sebelumnya. Struktur ini biasanya menggunakan variabel penghitung.
+            </p>
+
+        </div>
+
+        <!-- WHILE -->
+        <div class="p-4 bg-white border-[#293241] border-[2px] border-l-[5px] rounded-2xl shadow-xl mt-8">
+
+            <h2 class="font-bold text-lg">
+                2. Perulangan Struktur While
+            </h2>
+
+            <p class="mt-4 indent-5">
+                Perulangan While digunakan ketika jumlah perulangan belum diketahui.
+                Selama kondisi bernilai benar (True), perulangan akan terus
+                dijalankan.
+            </p>
+
+        </div>
+
+        <!-- DO WHILE -->
+        <div class="p-4 bg-white border-[#293241] border-[2px] border-l-[5px] rounded-2xl shadow-xl mt-8">
+
+            <h2 class="font-bold text-lg">
+                3. Perulangan Struktur Do-While
+            </h2>
+
+            <p class="mt-4 indent-5">
+                Do-While adalah perulangan yang akan menjalankan perintah terlebih
+                dahulu, kemudian memeriksa kondisi. Perulangan ini pasti dijalankan
+                minimal satu kali.
+            </p>
+
+        </div>
+
+        <!-- NESTED LOOP -->
+        <div class="p-4 bg-white border-[#293241] border-[2px] border-l-[5px] rounded-2xl shadow-xl mt-8">
+
+            <h2 class="font-bold text-lg">
+                4. Perulangan Bersarang (Nested Loop)
+            </h2>
+
+            <p class="mt-4 indent-5">
+                Nested Loop adalah perulangan yang berada di dalam perulangan
+                lainnya. Biasanya digunakan untuk membuat tabel, matriks,
+                atau pola tertentu.
+            </p>
+
+        </div>
+
+        <!-- KODE -->
+        <div class="bg-[#293241] pt-5 rounded-2xl mt-8 overflow-hidden">
+
+            <p class="pl-4 pb-3 text-[#DFFBFC] font-medium">
+                CONTOH PROGRAM PYTHON
+            </p>
+
+            <div class="text-[#DFFBFC] h-[600px] overflow-auto">
+
+                <pre><code class="language-python">
+# Perulangan For
+print("FOR")
+for i in range(1, 6):
+    print(i)
+
+# Perulangan While
+print("\nWHILE")
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+
+# Perulangan Do-While
+print("\nDO-WHILE")
+i = 1
+while True:
+    print(i)
+    i += 1
+
+    if i > 5:
+        break
+
+# Nested Loop
+print("\nNESTED LOOP")
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(i, j)
+</code></pre>
+
+            </div>
+
+        </div>
+
+
         <!-- teks perintah -->
         <div class="p-3 fisi rounded-2xl bg-white border-[#293241] border-l-[5px] border-[2px] shadow-xl">
             <h1 class="poppins w-[100%] p-[5px] animate-pulse font-bold text-center">PERINTAH</h1>
@@ -90,7 +208,8 @@
                 FLOWCHART
             </p>
             <div class="bg-[#DFFBFC]  w-full h-[550px] flex justify-start overflow-auto  p-[20px] kode-scroll">
-                <img src="gambar/flowchartLondry.drawio.png" alt="Foto" class="max-w-none w-[600px] lg:w-[624px] h-[1092px]">
+                <img src="gambar/flowchartLondry.drawio.png" alt="Foto"
+                    class="max-w-none w-[600px] lg:w-[624px] h-[1092px]">
             </div>
         </div>
 
@@ -181,5 +300,17 @@ while True:
         <!-- /// endcoding /// -->
     </div>
 
+
+</div>
+
+
+<div class="w-full flex justify-center">
+
+    <div class="w-full md:w-[70%]">
+
+        <!-- Materi -->
+
+
+    </div>
 
 </div>
