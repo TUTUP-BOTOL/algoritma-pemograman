@@ -1,6 +1,58 @@
 <div class="w-full flex justify-center">
     <div class="w-full md:w-[70%]">
-        
+
+    
+
+        <!-- psodocode -->
+        <div class="bg-[#293241] p-3 mt-[20px] mb-[20px] rounded-2xl">
+            <p class="h-70px mb-[10px] font4 font-medium text-[#DFFBFC]">
+                PSODOCODE
+            </p>
+            <div class="bg-[#fefefe]  w-full h-[550px] overflow-x-auto p-[20px] kode-scroll">
+                <p class="text-black font-mono text-[15px]">
+
+                    ALGORITMA SISTEM PENJUALAN HARIAN <br><br>
+
+                    Deklarasi: <br>
+                    hari[7] = {"Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"} <br>
+                    penjualan[7] <br>
+                    total = 0 <br>
+                    tertinggi <br>
+                    terendah <br>
+                    i <br> <br>
+
+                    Deskripsi: <br>
+                    Untuk i ← 0 sampai 6 lakukan <br>
+                    Input penjualan[i] <br>
+                    total ← total + penjualan[i] <br>
+                    Selesai <br> <br>
+
+                    tertinggi ← penjualan[0] <br>
+                    terendah ← penjualan[0] <br> <br>
+
+                    Untuk i ← 1 sampai 6 lakukan <br>
+                    Jika penjualan[i] > tertinggi maka <br>
+                    tertinggi ← penjualan[i] <br>
+                    Endif <br> <br>
+
+                    Jika penjualan[i] &lt; terendah maka terendah ← penjualan[i] Endif Selesai Tampilkan data penjualan
+                    setiap hari Tampilkan
+                    total penjualan Tampilkan penjualan tertinggi Tampilkan penjualan terendah Selesai
+                </p>
+            </div>
+        </div>
+
+        <!-- flowchart -->
+        <div class="bg-[#293241] p-3 mt-[20px] mb-[20px]">
+            <p class="h-70px mb-[10px] font4 font-medium text-[#DFFBFC]">
+                FLOWCHART
+            </p>
+            <div class="bg-[#000000]  w-full h-[550px] flex justify-start overflow-auto  p-[20px] kode-scroll">
+                <img src="gambar/array1.drawio.png" alt="Foto" class="max-w-none w-full h-[800px] lg:h-[1092px]">
+            </div>
+        </div>
+
+        <!-- kode pyton -->
         <div class="bg-[#293241] pt-5 rounded-2xl relative mt-8 overflow-hidden">
             <p class="h-70px pl-3 pb-[10px] font4 font-medium text-[#DFFBFC]">
                 KODE PROGRAM
@@ -24,6 +76,38 @@
     print("Penjualan Tertinggi:", max(penjualan))
     print("Penjualan Terendah:", min(penjualan))
                 </code></pre>
+            </div>
+        </div>
+
+        <!-- run -->
+        <div class="bg-[#293241] pt-3 mt-[20px] mb-[20px] rounded-2xl overflow-hidden">
+            <p class="h-70px pl-3 mb-[10px] font4 font-medium text-[#DFFBFC]">
+                RUN / Hasil
+            </p>
+            <div class="bg-[#000000]  w-full h-[550px] overflow-x-auto p-[20px] kode-scroll">
+                <pre class="text-white">
+PS D:\proect\uas_algoritma_pem> & C:/Users/LENOVO/AppData/Local/Programs/Python/Python313/python.exe d:/proect/uas_algoritma_pem/array.py
+Masukkan penjualan hari Senin: 500000
+Masukkan penjualan hari Selasa: 400000
+Masukkan penjualan hari Rabu: 750000
+Masukkan penjualan hari Kamis: 680000
+Masukkan penjualan hari Jumat: 305000
+Masukkan penjualan hari Sabtu: 836000
+Masukkan penjualan hari Minggu: 1250000
+
+Data Penjualan:
+Senin : Rp500,000
+Selasa : Rp400,000
+Rabu : Rp750,000
+Kamis : Rp680,000
+Jumat : Rp305,000
+Sabtu : Rp836,000
+Minggu : Rp1,250,000
+
+Total Penjualan: 4721000
+Penjualan Tertinggi: 1250000
+Penjualan Terendah: 305000
+                </pre>
             </div>
         </div>
     </div>

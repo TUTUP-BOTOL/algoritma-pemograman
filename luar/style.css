@@ -40,7 +40,10 @@
 .fisi {
     font-family: 'Roboto', sans-serif;
 }
-
+.kode-scroll {
+    overflow-y: auto;
+    overflow-x: auto;
+}
 .kode-scroll::-webkit-scrollbar {
     width: 6px;
 }
@@ -53,7 +56,10 @@
     background: #FFA800;
     border-radius: 9999px;
 }
-
+/* Sembunyikan scrollbar horizontal */
+.kode-scroll::-webkit-scrollbar:horizontal {
+    display: none;
+}
 .animate-marquee {
     width: max-content;
     animation: marquee 10s linear infinite;

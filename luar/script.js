@@ -7,22 +7,12 @@ profileBtn.addEventListener("click", () => {
     profileBox.classList.remove("hidden");
     profileBox.classList.add("flex");
 });
-
 // tutup popup
 closeProfile.addEventListener("click", () => {
     profileBox.classList.add("hidden");
     profileBox.classList.remove("flex");
 });
 
-
-
-
-
-// function copyCode(button) {
-//     const pre = button.parentElement.querySelector('pre');
-//     navigator.clipboard.writeText(pre.innerText);
-//     alert("Code berhasil dicopy!");
-// }
 
 function copyCode(button) {
     const pre = button.parentElement.querySelector('pre');
@@ -101,6 +91,48 @@ function showPage(pageId) {
     }
 }
 
+function showPage(arrId) {
+    // Sembunyikan semua halaman
+    document.getElementById('home').classList.add('hidden');
+    document.getElementById('about').classList.add('hidden');
+    document.getElementById('run').classList.add('hidden');
+
+    // Tampilkan halaman aktif
+    document.getElementById(arrId).classList.remove('hidden');
+
+    const btnHome = document.getElementById('btn-home');
+    const btnAbout = document.getElementById('btn-about');
+    const btnRun = document.getElementById('btn-run');
+
+    if (arrId === 'home') {
+        btnHome.classList.remove('bg-[#DFFBFC]',);
+        btnHome.classList.add('bg-[#FAD06C]',);
+
+        btnAbout.classList.remove('bg-[#FAD06C]',);
+        btnAbout.classList.add('bg-[#DFFBFC]',);
+
+        btnRun.classList.remove('bg-[#FAD06C]',);
+        btnRun.classList.add('bg-[#DFFBFC]',);
+    } else if (arrId === 'about') {
+        btnAbout.classList.remove('bg-[#DFFBFC]',);
+        btnAbout.classList.add('bg-[#FAD06C]',);
+
+        btnHome.classList.remove('bg-[#FAD06C]',);
+        btnHome.classList.add('bg-[#DFFBFC]',);
+
+        btnRun.classList.remove('bg-[#FAD06C]',);
+        btnRun.classList.add('bg-[#DFFBFC]',);
+    } else if (arrId === 'run') {
+        btnRun.classList.remove('bg-[#DFFBFC]',);
+        btnRun.classList.add('bg-[#FAD06C]',);
+
+        btnAbout.classList.remove('bg-[#FAD06C]',);
+        btnAbout.classList.add('bg-[#DFFBFC]',);
+
+        btnHome.classList.remove('bg-[#FAD06C]',);
+        btnHome.classList.add('bg-[#DFFBFC]',);
+    }
+}
 
 
 
