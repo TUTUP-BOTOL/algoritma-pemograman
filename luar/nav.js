@@ -1,5 +1,7 @@
 const contentDiv = document.getElementById('content');
 const btnHm = document.getElementById('btn-hm');
+const btdata = document.getElementById('btn-tpdata');
+const btsek = document.getElementById('btn-sek');
 const btnthesis = document.getElementById('btn-thesis');
 const btntg1 = document.getElementById('btn-tg1');
 const btntg2 = document.getElementById('btn-tg2');

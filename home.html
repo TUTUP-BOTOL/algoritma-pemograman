@@ -1,8 +1,334 @@
-<div class="text-[128px] w-100% h-screen poppins font-bold text-center"> 
-    <h1 class="text-2xl md:text-4xl lg:text-6xl">
-    Hello World
-</h1>
-<div class="hidden lg:block">
-  Konten Desktop
-</div>
+<div class="w-100% poppins">
+  <div class="w-full flex justify-center">
+
+    <div class="w-full md:w-[70%]">
+
+      <!-- Materi -->
+      <div class="p-4 rounded-2xl bg-white border-[#293241] border-l-[5px] border-[2px] shadow-xl">
+        <h1 class="text-center font-bold text-xl animate-pulse">
+          STRUKTUR DASAR ALGORITMA
+        </h1>
+
+        <p class="mt-4 indent-5 text-[15px]">
+          Struktur dasar algoritma merupakan komponen yang digunakan untuk
+          menyusun langkah-langkah penyelesaian masalah secara sistematis.
+          Beberapa bagian penting dalam notasi algoritmik meliputi tipe dasar,
+          ekspresi, harga (nilai), assignment, dan input/output.
+        </p>
+      </div>
+
+      <!-- Penjelasan -->
+      <div class="p-4 rounded-2xl bg-white border-[#293241] border-l-[5px] border-[2px] mt-8 shadow-xl">
+
+        <h1 class="text-center font-bold animate-pulse">
+          PENJELASAN
+        </h1>
+
+        <div class="mt-4 space-y-5">
+
+          <div>
+            <h2 class="font-bold text-lg">1. Tipe Dasar</h2>
+            <p>
+              Tipe dasar adalah jenis data yang digunakan untuk menyimpan
+              nilai. Contohnya Integer (bilangan bulat), Real/Float
+              (bilangan pecahan), Character (karakter), dan Boolean
+              (Benar atau Salah).
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-bold text-lg">2. Ekspresi</h2>
+            <p>
+              Ekspresi adalah kombinasi variabel, konstanta, dan operator
+              yang menghasilkan suatu nilai.
+              Contoh:
+              <span class="font-mono">total = harga * jumlah</span>
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-bold text-lg">3. Harga (Nilai)</h2>
+            <p>
+              Harga atau nilai adalah isi yang dimiliki oleh sebuah
+              variabel. Misalnya:
+              <span class="font-mono">umur = 19</span>,
+              maka nilai variabel umur adalah 19.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-bold text-lg">4. Assignment</h2>
+            <p>
+              Assignment adalah proses pemberian nilai kepada variabel
+              menggunakan tanda panah atau simbol "=".
+              Contoh:
+              <span class="font-mono">nama = "Ilham"</span>
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-bold text-lg">5. Input / Output</h2>
+            <p>
+              Input adalah data yang dimasukkan oleh pengguna, sedangkan
+              output adalah hasil yang ditampilkan oleh program.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Notasi Algoritmik -->
+      <div class="bg-[#293241] p-4 mt-8 rounded-2xl">
+        <p class="font-medium text-[#DFFBFC] mb-3">
+          NOTASI ALGORITMIK (SKEMA)
+        </p>
+
+        <div class="bg-white h-[450px] overflow-auto p-5 rounded-lg">
+          <p class="font-mono text-[15px]">
+
+            Deklarasi <br><br>
+
+            nama : string <br>
+            umur : integer <br>
+            nilai : real <br>
+            status : boolean <br><br>
+
+            Deskripsi <br><br>
+
+            Input nama <br>
+            Input umur <br>
+            Input nilai <br><br>
+
+            status ← nilai >= 75 <br><br>
+
+            Tampilkan nama <br>
+            Tampilkan umur <br>
+            Tampilkan nilai <br>
+            Tampilkan status <br>
+
+          </p>
+        </div>
+      </div>
+
+      <!-- Contoh Program -->
+      <div class="bg-[#293241] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+
+        <p class="pl-4 pb-3 font-medium text-[#DFFBFC]">
+          CONTOH PROGRAM PYTHON
+        </p>
+
+        <div class="h-max-[500px] overflow-auto text-[#DFFBFC]">
+          <pre><code class="language-python">
+# Input
+nama = input("Masukkan nama : ")
+umur = int(input("Masukkan umur : "))
+nilai = float(input("Masukkan nilai : "))
+
+# Ekspresi
+status = nilai >= 75
+
+# Output
+print("\n===== DATA SISWA =====")
+print("Nama   :", nama)
+print("Umur   :", umur)
+print("Nilai  :", nilai)
+print("Lulus  :", status)
+</code></pre>
+        </div>
+
+      </div>
+
+
+      <div class="p-4 mt-6 rounded-2xl bg-white border-[#293241] border-l-[5px] border-[2px] shadow-xl">
+        <h1 class="text-center font-bold text-xl animate-pulse">
+          ALGORITMA, STRUKTUR, DAN KARAKTERISTIK
+        </h1>
+
+        <p class="mt-4 indent-5">
+          Algoritma merupakan urutan langkah-langkah logis dan sistematis
+          yang digunakan untuk menyelesaikan suatu masalah sehingga
+          menghasilkan keluaran yang diinginkan.
+        </p>
+      </div>
+
+      <!-- Penjelasan -->
+      <div class="p-4 rounded-2xl bg-white border-[#293241] border-l-[5px] border-[2px] mt-8 shadow-xl">
+
+        <h1 class="text-center font-bold animate-pulse">
+          PENJELASAN MATERI
+        </h1>
+
+        <div class="mt-5 space-y-5">
+
+          <div>
+            <h2 class="font-bold text-lg">1. Algoritma</h2>
+            <p>
+              Algoritma adalah serangkaian langkah-langkah yang disusun
+              secara logis dan sistematis untuk menyelesaikan suatu masalah.
+            </p>
+
+            <p class="mt-2">
+              <span class="font-bold">Contoh :</span> Membuat teh.
+            </p>
+
+            <ul class="list-disc ml-6 mt-2">
+              <li>Siapkan gelas.</li>
+              <li>Masukkan teh dan gula.</li>
+              <li>Tuangkan air panas.</li>
+              <li>Aduk hingga tercampur.</li>
+              <li>Teh siap diminum.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="font-bold text-lg">2. Struktur Algoritma</h2>
+            <p>
+              Struktur algoritma merupakan pola dasar dalam penyusunan
+              langkah-langkah program.
+            </p>
+
+            <ul class="list-disc ml-6 mt-2">
+              <li>Sekuensial (urutan).</li>
+              <li>Percabangan (seleksi).</li>
+              <li>Perulangan (iterasi).</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="font-bold text-lg">3. Karakteristik Algoritma</h2>
+
+            <ul class="list-disc ml-6 mt-2">
+              <li>Memiliki input (masukan).</li>
+              <li>Menghasilkan output (keluaran).</li>
+              <li>Langkah-langkah jelas dan tidak ambigu.</li>
+              <li>Memiliki akhir (finite).</li>
+              <li>Efektif dan dapat dikerjakan.</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Struktur Algoritma -->
+      <div class="bg-[#293241] p-4 mt-8 rounded-2xl">
+
+        <p class="text-[#DFFBFC] font-medium mb-3">
+          CONTOH STRUKTUR ALGORITMA
+        </p>
+
+        <div class="bg-white p-5 rounded-lg h-[400px] overflow-auto">
+
+          <p class="font-mono text-[15px]">
+
+            1. Sekuensial <br><br>
+
+            Input panjang <br>
+            Input lebar <br>
+            luas ← panjang × lebar <br>
+            Tampilkan luas <br><br>
+
+            -------------------------------- <br><br>
+
+            2. Percabangan <br><br>
+
+            Input nilai <br>
+
+            Jika nilai ≥ 75 maka <br>
+            &nbsp;&nbsp;Tampilkan "Lulus" <br>
+
+            Jika tidak <br>
+            &nbsp;&nbsp;Tampilkan "Tidak Lulus" <br><br>
+
+            -------------------------------- <br><br>
+
+            3. Perulangan <br><br>
+
+            Untuk i = 1 sampai 5 <br>
+            &nbsp;&nbsp;Tampilkan i <br>
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Karakteristik -->
+      <div class="bg-[#293241] p-4 mt-8 rounded-2xl">
+
+        <p class="text-[#DFFBFC] font-medium mb-3">
+          KARAKTERISTIK ALGORITMA
+        </p>
+
+        <div class="bg-white p-5 rounded-lg">
+
+          <ol class="list-decimal ml-6 space-y-3">
+
+            <li>
+              <span class="font-bold">Input :</span>
+              Memiliki data masukan yang akan diproses.
+            </li>
+
+            <li>
+              <span class="font-bold">Output :</span>
+              Menghasilkan informasi atau hasil.
+            </li>
+
+            <li>
+              <span class="font-bold">Definiteness :</span>
+              Setiap langkah harus jelas.
+            </li>
+
+            <li>
+              <span class="font-bold">Finiteness :</span>
+              Memiliki akhir atau berhenti setelah sejumlah langkah.
+            </li>
+
+            <li>
+              <span class="font-bold">Effectiveness :</span>
+              Langkah-langkah dapat dilakukan dan efisien.
+            </li>
+
+          </ol>
+
+        </div>
+
+      </div>
+
+      <!-- Contoh Program -->
+      <div class="bg-[#293241] pt-5 rounded-2xl relative mt-8 overflow-hidden">
+
+        <p class="pl-4 pb-3 text-[#DFFBFC] font-medium">
+          CONTOH PROGRAM PYTHON
+        </p>
+
+        <div class="h-[500px] overflow-auto text-[#DFFBFC]">
+
+          <pre><code class="language-python">
+# Input
+nilai = int(input("Masukkan nilai : "))
+
+# Percabangan
+if nilai >= 75:
+    status = "Lulus"
+else:
+    status = "Tidak Lulus"
+
+# Output
+print("Status :", status)
+
+# Perulangan
+print("\nBilangan 1 - 5")
+for i in range(1, 6):
+    print(i)
+</code></pre>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
 </div>

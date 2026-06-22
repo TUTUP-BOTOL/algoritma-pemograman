@@ -1,0 +1,192 @@
+<div class="w-full flex justify-center">
+
+    <div class="w-full md:w-[70%]">
+
+        <!-- Judul -->
+        <div class="p-4 bg-white border-[#293241] border-l-[5px] border-[2px] rounded-2xl shadow-xl">
+            <h1 class="text-center text-xl font-bold animate-pulse">
+                JAWABAN TUGAS TIPE DATA DAN OPERATOR JAVA
+            </h1>
+        </div>
+
+        <!-- Nomor 1 -->
+        <div class="p-4 bg-white border-[#293241] border-l-[5px] border-[2px] rounded-2xl shadow-xl mt-8">
+            <h2 class="font-bold text-lg">1. Perbedaan Tipe Data Primitif dan Non-Primitif</h2>
+
+            <table class="w-full border-collapse mt-4">
+                <tr class="bg-[#293241] text-white">
+                    <th class="border p-2">Primitif</th>
+                    <th class="border p-2">Non-Primitif</th>
+                </tr>
+
+                <tr>
+                    <td class="border p-2">Menyimpan nilai secara langsung.</td>
+                    <td class="border p-2">Menyimpan referensi objek.</td>
+                </tr>
+
+                <tr>
+                    <td class="border p-2">Ukuran memori tetap.</td>
+                    <td class="border p-2">Ukuran memori dapat berubah.</td>
+                </tr>
+
+                <tr>
+                    <td class="border p-2">
+                        Contoh: int, float, char, boolean.
+                    </td>
+                    <td class="border p-2">
+                        Contoh: String, Array, Object.
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!-- Nomor 2 -->
+        <div class="p-4 bg-white border-[#293241] border-l-[5px] border-[2px] rounded-2xl shadow-xl mt-8">
+
+            <h2 class="font-bold text-lg">
+                2. Kesalahan Penulisan Variabel
+            </h2>
+
+            <div class="mt-4">
+
+                <p class="font-bold">a. Int 5angka;</p>
+
+                <p>
+                    Salah karena nama variabel tidak boleh diawali angka dan penulisan
+                    tipe data harus huruf kecil.
+                </p>
+
+                <p class="mt-2 text-green-700">
+                    Benar : int angka5;
+                </p>
+
+                <hr class="my-4">
+
+                <p class="font-bold">b. String nama siswa;</p>
+
+                <p>
+                    Salah karena nama variabel tidak boleh mengandung spasi.
+                </p>
+
+                <p class="mt-2 text-green-700">
+                    Benar : String namaSiswa;
+                </p>
+
+                <hr class="my-4">
+
+                <p class="font-bold">c. Int static;</p>
+
+                <p>
+                    Salah karena "static" merupakan keyword (kata kunci) pada Java
+                    dan tipe data int harus ditulis huruf kecil.
+                </p>
+
+                <p class="mt-2 text-green-700">
+                    Benar : int nilaiStatic;
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Nomor 3 -->
+        <div class="p-4 bg-white border-[#293241] border-l-[5px] border-[2px] rounded-2xl shadow-xl mt-8">
+
+            <h2 class="font-bold text-lg">
+                3. Deklarasi Tipe Data Array
+            </h2>
+
+            <div class="bg-[#293241] p-4 rounded-xl mt-4 text-white overflow-auto">
+
+                <pre><code>
+int[] nilai = {80, 85, 90, 95};
+
+String[] nama = {
+    "Andi",
+    "Budi",
+    "Rina"
+};
+</code></pre>
+
+            </div>
+
+        </div>
+
+        <!-- Nomor 4 -->
+        <div class="p-4 bg-white border-[#293241] border-l-[5px] border-[2px] rounded-2xl shadow-xl mt-8">
+
+            <h2 class="font-bold text-lg">
+                4. Operator Aritmatika Java
+            </h2>
+
+            <table class="w-full border-collapse mt-4">
+
+                <tr class="bg-[#293241] text-white">
+                    <th class="border p-2">Operator</th>
+                    <th class="border p-2">Fungsi</th>
+                </tr>
+
+                <tr>
+                    <td class="border p-2">+</td>
+                    <td class="border p-2">Penjumlahan</td>
+                </tr>
+
+                <tr>
+                    <td class="border p-2">-</td>
+                    <td class="border p-2">Pengurangan</td>
+                </tr>
+
+                <tr>
+                    <td class="border p-2">*</td>
+                    <td class="border p-2">Perkalian</td>
+                </tr>
+
+                <tr>
+                    <td class="border p-2">/</td>
+                    <td class="border p-2">Pembagian</td>
+                </tr>
+
+                <tr>
+                    <td class="border p-2">%</td>
+                    <td class="border p-2">Sisa hasil bagi (modulus)</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- Nomor 5 -->
+        <div class="bg-[#293241] pt-5 rounded-2xl mt-8 overflow-hidden">
+
+            <p class="pl-4 pb-3 text-[#DFFBFC] font-medium">
+                5. Contoh Operator Pembagian Bahasa Java
+            </p>
+
+            <div class="text-[#DFFBFC] h-[350px] overflow-auto">
+
+                <pre><code class="language-java">
+public class Pembagian {
+
+    public static void main(String[] args) {
+
+        int angka1 = 20;
+        int angka2 = 5;
+
+        int hasil = angka1 / angka2;
+
+        System.out.println("Hasil pembagian = "
+                            + hasil);
+
+    }
+
+}
+</code></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
